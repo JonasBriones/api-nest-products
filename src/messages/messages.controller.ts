@@ -1,4 +1,4 @@
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 import { CreateMessageDto } from './dto/create-message-dto';
 
 
@@ -6,7 +6,7 @@ import { CreateMessageDto } from './dto/create-message-dto';
 export class MessagesController {
 
  @Post()
- create(@Body createMessageDto: CreateMessageDto ){
-
+ create(@Body() createMessageDto: CreateMessageDto ){
+    return 'This action agrega un mensaje';
  }   
 }
